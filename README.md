@@ -7,8 +7,8 @@ G.I. Joe Commodore 64 protection writer.
 # To rebuild the original protected disk (and obtain a clean master)
 
 Copy these d64s on the two sides of a floppy disk.   
-<a href="https://github.com/Zibri/G.I.Joe/raw/main/G.I.JOE_Master_Side_A.d64">Marble Madness D64</a>   
-<a href="https://github.com/Zibri/G.I.Joe/raw/main/G.I.JOE_Master_Side_B.d64">Marble Madness D64</a>   
+<a href="https://github.com/Zibri/G.I.Joe/raw/main/G.I.JOE_Master_Side_A.d64">G.I. Joe Side A D64</a>   
+<a href="https://github.com/Zibri/G.I.Joe/raw/main/G.I.JOE_Master_Side_B.d64">G.I. Joe Side B D64</a>   
 
 Then insert disk (Side A) into the drive and:
 
