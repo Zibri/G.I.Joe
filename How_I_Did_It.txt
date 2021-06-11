@@ -1,0 +1,59 @@
+---------------------------------------------------------------------------
+  G.I. JOE (COPY). (because of a challenge with my friend Stefy / RamJam)
+---------------------------------------------------------------------------
+Recreating the original protection, without even reversing the loader code.
+---------------------------------------------------------------------------
+                          By Zibri / RamJam
+---------------------------------------------------------------------------
+
+    A couple of hours ago, I asked on a facebook group what was the original
+commodore 64 game more difficult to copy (not absolutely but between the
+members of the group).
+    A few people including Stefy of RamJam named G.I. Joe and I also remember
+that at the time it was not easy to copy it using normal programs.
+    So, as usual, I got curious and started to analyze it like I was in 1985:
+	
+	First I used "quick copy" to make a copy on another disk.
+	I immediately noticed that the disk appears as a normal disk except for
+	the fact that sector 20 of track 1 is "missing". (Error 20)
+	
+	So I made a quick program to seek for sector 19, skip the sector data
+and the ending gap and read the next 512 bytes.
+
+    Analyzing the read bytes (GCR) it was easy to understand that instead of
+sector 20, there is another "sector 3".
+
+    So, without even analyzing the loader which surely is heavily protected,
+I imagine that all the loader does is to read sector 3 two or more times so
+to get both data blocks. No mystery to be found in the loader if my theory
+is correct.
+
+    As a result of my theory, I wrote a quick and dirty program to seek until
+sector 19 of track 1, then skip the data block and then write the second
+"sector 3" that we read before and check if the game starts.
+
+   By my surprise, the game started perfectly.
+   
+   I repackaged the game in two D64 files. Side A also contains a new program
+called, as usual, "WP".
+
+   All you have to do is: transfer the two D64 on the two sides of a normal disk.
+Insert SIDE A of the disk and write:
+
+   LOAD"WP",8
+   
+   and then RUN
+   
+   After that you can directly LOAD"GI*",8,1 and enjoy the game.
+   
+   This operation is needed only one time on a real disk.
+   If you want to check it in an emulator using directly the D64, you will have
+   to run "WP" every time, or first convert the D64 in a G64 and then ruun WP only once.
+   
+   That's all folks!
+   Thanks for reading!
+   
+   A kiss to Stefy and a big hello to everyone in the commodore groups!
+ 
+    Yours,
+ Zibri/RamJam   
